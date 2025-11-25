@@ -1,14 +1,24 @@
 // Modal component with default export
 import React from 'react';
-import { ModalProps } from './hooks';
 
-const Modal: React.FC<ModalProps> = ({ 
+// Inline type definitions
+export interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+  title?: string;
+  size?: 'small' | 'medium' | 'large';
+}
+
+export type ModalSize = 'small' | 'medium' | 'large';
+
+function Modal({ 
   isOpen, 
   onClose, 
   children, 
   title,
   size = 'medium' 
-}) => {
+}: ModalProps) {
   if (!isOpen) return null;
   
   const modalClassName = `modal modal-${size}`;
@@ -26,7 +36,7 @@ const Modal: React.FC<ModalProps> = ({
       </div>
     </div>
   );
-};
+}
 
-// Another default export - more "problematic" patterns
+// Another default export - comprehensive export patterns
 export default Modal;

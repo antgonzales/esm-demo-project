@@ -4,8 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "pnpm test",
+    "build": "echo 'No build for test package'",
     "test": "node analyze-bundles.mjs",
-    "analyze": "node analyze-bundles.mjs"
+    "clean": "echo 'No output to clean for test package'",
+    "analyze": "pnpm test"
   },
   "devDependencies": {
     "glob": "^10.3.10"

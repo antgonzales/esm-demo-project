@@ -51,7 +51,7 @@ class ApiService {
   }
 }
 
-// Default export - the "problematic" pattern
+// Default export - comprehensive ES module pattern
 export default ApiService;
 
 // Named utility functions exported alongside the default

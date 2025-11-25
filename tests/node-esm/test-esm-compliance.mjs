@@ -163,12 +163,12 @@ async function runTests() {
   console.log('not the issue - build configuration is the determining factor.');
   console.log('');
   
-  if (passedTests.length > 0 && failedTests.length > 0) {
-    console.log('🎯 CONCLUSION:');
-    console.log('Modern build tools (like Rollup and Webpack) can transform');
-    console.log('"problematic" source patterns into ESM-compliant output.');
-    console.log('The issue is tooling configuration, not source patterns.');
-  }
+   if (passedTests.length > 0 && failedTests.length > 0) {
+     console.log('🎯 CONCLUSION:');
+     console.log('Modern build tools (like Rollup and Webpack) can transform');
+     console.log('comprehensive source patterns into ESM-compliant output.');
+     console.log('The results suggest tooling configuration affects compliance.');
+   }
   
   // Exit with failure if any critical tests failed
   const rollupPassed = testResults.find(t => t.name === 'Rollup ESM')?.success;

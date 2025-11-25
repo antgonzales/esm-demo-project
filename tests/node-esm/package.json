@@ -4,10 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "pnpm test",
+    "build": "echo 'No build for test package'",
     "test": "node test-esm-compliance.mjs",
-    "test:rollup": "node test-rollup-esm.mjs",
-    "test:webpack": "node test-webpack-esm.mjs", 
-    "test:typescript": "node test-typescript-raw.mjs"
+    "clean": "echo 'No output to clean for test package'",
+    "analyze": "pnpm test",
+    
+    "test:rollup": "node test-rollup-build.mjs",
+    "test:webpack": "node test-webpack-build.mjs", 
+    "test:typescript": "node test-typescript-build.mjs"
   },
   "devDependencies": {
     "chalk": "^5.3.0"

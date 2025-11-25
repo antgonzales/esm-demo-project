@@ -2,7 +2,7 @@
 /**
  * ESM Compliance Test: Webpack Build Output
  * 
- * This test validates that our Webpack build transforms "problematic" patterns
+ * This test validates that our Webpack build transforms comprehensive export patterns
  * into ESM-compliant code that works in strict Node.js ESM mode.
  */
 
@@ -110,7 +110,7 @@ try {
   }
   
   console.log('\n🎉 Webpack ESM Build: ALL TESTS PASSED!');
-  console.log('✅ Webpack successfully bundled all "problematic" patterns');
+  console.log('✅ Webpack successfully bundled all comprehensive export patterns');
   console.log('✅ ESM output is compliant and importable');
   console.log('✅ Tree-shaking worked on barrel files');
   console.log('✅ Complex export patterns handled correctly');

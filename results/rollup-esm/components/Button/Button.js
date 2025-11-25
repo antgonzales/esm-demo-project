@@ -1,11 +1,16 @@
 import { jsx } from 'react/jsx-runtime';
 
-const Button = ({
+const BUTTON_VARIANTS = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  DANGER: 'danger'
+};
+function Button({
   children,
   variant = 'primary',
   onClick,
   disabled = false
-}) => {
+}) {
   const className = `btn btn-${variant} ${disabled ? 'disabled' : ''}`;
   return jsx("button", {
     className: className,
@@ -14,7 +19,7 @@ const Button = ({
     type: "button",
     children: children
   });
-};
+}
 
-export { Button as default };
+export { BUTTON_VARIANTS, Button as default };
 //# sourceMappingURL=Button.js.map

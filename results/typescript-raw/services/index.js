@@ -1,5 +1,5 @@
-// Services barrel file - complex mixing of all "problematic" patterns
-// This creates the deepest and most complex re-export chain
+// Services barrel file - demonstrates complex mixing of re-export patterns
+// This creates comprehensive and deep re-export chains
 // Re-export everything from both services
 export * from './api';
 export * from './cache';
@@ -19,9 +19,9 @@ export const services = {
     cache,
     ApiService: ApiServiceClass
 };
-// Export services as default too (ultimate pattern mixing)
+// Export services as default too (comprehensive pattern mixing)
 export default services;
-// This file demonstrates the most complex "problematic" patterns:
+// This file demonstrates complex re-export patterns:
 // 1. ✅ Multiple export * statements
 // 2. ✅ Default + named exports mixed
 // 3. ✅ Re-exporting defaults as named

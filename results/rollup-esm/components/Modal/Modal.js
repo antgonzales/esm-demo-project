@@ -1,12 +1,12 @@
 import { jsx, jsxs } from 'react/jsx-runtime';
 
-const Modal = ({
+function Modal({
   isOpen,
   onClose,
   children,
   title,
   size = 'medium'
-}) => {
+}) {
   if (!isOpen) return null;
   const modalClassName = `modal modal-${size}`;
   return jsx("div", {
@@ -30,7 +30,7 @@ const Modal = ({
       })]
     })
   });
-};
+}
 
 export { Modal as default };
 //# sourceMappingURL=Modal.js.map

@@ -3,7 +3,7 @@
  * Tree-Shaking Performance Demo
  * 
  * This demonstrates tree-shaking effectiveness by creating consumer apps
- * that import different amounts from our "problematic" barrel files.
+ * that import different amounts from our comprehensive barrel files.
  */
 
 import { fileURLToPath } from 'url';
@@ -245,7 +245,7 @@ const runTreeShakingDemo = async () => {
     console.log(`   Single function: ${formatBytes(singleBarrel.size)}`);
     console.log(`   Everything imported: ${formatBytes(everything.size)}`);
     console.log(`   Code eliminated: ${formatBytes(eliminated)} (${percentEliminated}% reduction)`);
-    console.log('   ✅ RESULT: Tree-shaking works perfectly through barrel files!');
+     console.log('   ✅ RESULT: Tree-shaking works effectively through barrel files!');
     console.log('');
   }
   
@@ -261,7 +261,7 @@ const runTreeShakingDemo = async () => {
   
   console.log('🔬 ANALYSIS SUMMARY:');
   console.log('');
-  console.log('✅ Modern tree-shaking works perfectly with barrel files');
+  console.log('✅ Modern tree-shaking works effectively with barrel files');
   console.log('✅ Performance difference between direct/barrel imports is minimal');
   console.log('✅ Unused code is completely eliminated from bundles');
   console.log('✅ "Pay for what you use" principle is maintained');

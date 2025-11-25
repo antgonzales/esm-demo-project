@@ -17,7 +17,7 @@ const outDir = path.resolve(__dirname, "../../results/rollup-esm");
 
 /**
  * Rollup configuration for ESM output with proper TypeScript declaration handling
- * This configuration proves that barrel files and export * work perfectly with proper tooling
+ * This configuration demonstrates that barrel files and export * work effectively with proper tooling
  * @type {import('rollup').RollupOptions}
  */
 const rollupConfig = {
@@ -84,7 +84,7 @@ const rollupConfig = {
     }),
 
     // CRITICAL: Use tsc-alias to fix TypeScript declaration imports with .js extensions
-    // This is the key fix that makes our "problematic" barrel files ESM-compliant
+    // This is the key fix that makes our comprehensive barrel files ESM-compliant
     {
       name: "tscAliasESMFix",
       closeBundle() {

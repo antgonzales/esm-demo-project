@@ -2,9 +2,9 @@
 /**
  * Tree-Shaking Analysis with Barrel Files
  * 
- * This demo proves that tree-shaking works perfectly with barrel files
+ * This demo demonstrates that tree-shaking works effectively with barrel files
  * by comparing bundle sizes when importing different amounts of functionality
- * through our "problematic" barrel file chains.
+ * through our comprehensive barrel file chains.
  */
 
 import { fileURLToPath } from 'url';
@@ -229,7 +229,7 @@ const runTreeShakingAnalysis = async () => {
     console.log(`  📦 Single function: ${formatBytes(singleBarrel.size)}`);
     console.log(`  📚 Everything imported: ${formatBytes(everything.size)}`);
     console.log(`  ♻️  Code eliminated: ${formatBytes(reduction)} (${percentReduction}% reduction)`);
-    console.log(`  ✅ RESULT: Tree-shaking works perfectly through barrel files!`);
+    console.log(`  ✅ RESULT: Tree-shaking works effectively through barrel files!`);
     console.log('');
   }
   
@@ -251,7 +251,7 @@ const runTreeShakingAnalysis = async () => {
   console.log('');
   
   console.log('🚀 CONCLUSION:');
-  console.log('Tree-shaking works perfectly with barrel files when using modern');
+  console.log('Tree-shaking works effectively with barrel files when using modern');
   console.log('build tools. The performance concerns are based on outdated assumptions.');
   console.log('Developer-friendly patterns + Modern tooling = No performance penalty! ✅');
 };

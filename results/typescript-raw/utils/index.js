@@ -1,9 +1,9 @@
-// Utils barrel file - ultimate "problematic" pattern according to critics
-// Uses export * for everything - the pattern they most dislike
+// Utils barrel file - demonstrates comprehensive export * patterns
+// Uses export * for everything - showcasing re-export capabilities
 // Export everything from both utility modules
 export * from './string-utils';
 export * from './date-utils';
-// Also re-export defaults as named exports (more "problematic" mixing)
+// Also re-export defaults as named exports (additional pattern mixing)
 export { default as stringUtils } from './string-utils';
 export { default as dateUtils } from './date-utils';
 // Create a combined utils object (mixing all patterns)
@@ -13,7 +13,7 @@ export const utils = {
     string: stringUtilsDefault,
     date: dateUtilsDefault
 };
-// Export a default collection too (ultimate pattern mixing)
+// Export a default collection too (comprehensive pattern mixing)
 const allUtils = {
     ...stringUtilsDefault,
     ...dateUtilsDefault

@@ -4,10 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run clean && npm run webpack",
+    "start": "pnpm run dev",
+    "build": "pnpm run clean && pnpm run compile",
+    "test": "echo 'No tests for build package'",
     "clean": "rm -rf ../../results/webpack-esm/*",
-    "webpack": "webpack --config webpack.config.js --mode=production",
-    "watch": "webpack --config webpack.config.js --mode=development --watch"
+    "dev": "webpack --config webpack.config.js --mode=development --watch",
+    "compile": "webpack --config webpack.config.js --mode=production",
+    
+    "webpack": "pnpm run compile",
+    "watch": "pnpm run dev"
   },
   "devDependencies": {
     "@babel/core": "^7.23.6",

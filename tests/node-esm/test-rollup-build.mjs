@@ -2,7 +2,7 @@
 /**
  * ESM Compliance Test: Rollup Build Output
  * 
- * This test validates that our Rollup build transforms "problematic" patterns
+ * This test validates that our Rollup build transforms comprehensive export patterns
  * into ESM-compliant code that works in strict Node.js ESM mode.
  */
 
@@ -18,7 +18,7 @@ console.log('🧪 Testing Rollup ESM Build Output...\n');
 
 try {
   // ============================================================================
-  // TEST 1: Import from main barrel file (deepest "problematic" pattern)
+  // TEST 1: Import from main barrel file (deepest comprehensive export pattern)
   // ============================================================================
   console.log('📦 Test 1: Importing from main barrel file...');
   
@@ -114,7 +114,7 @@ try {
   console.log('  ✅ Namespace imports work correctly');
   
   console.log('\n🎉 Rollup ESM Build: ALL TESTS PASSED!');
-  console.log('✅ Barrel files work perfectly with Rollup + tsc-alias');
+  console.log('✅ Barrel files work effectively with Rollup + tsc-alias');
   console.log('✅ export * patterns are ESM-compliant when built correctly');
   console.log('✅ Mixed default/named exports work flawlessly');
   console.log('✅ Deep re-export chains cause no ESM issues');

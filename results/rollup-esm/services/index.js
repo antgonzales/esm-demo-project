@@ -3,8 +3,8 @@ export { isSuccessResponse } from './api.js';
 import { cache } from './cache.js';
 export { Cache, clearExpiredEntries, createCache } from './cache.js';
 
-// Services barrel file - complex mixing of all "problematic" patterns
-// This creates the deepest and most complex re-export chain
+// Services barrel file - demonstrates complex mixing of re-export patterns
+// This creates comprehensive and deep re-export chains
 // Re-export everything from both services
 // Export pre-configured service instances
 const apiService = new ApiService(createApiConfig('https://api.example.com'));
@@ -14,7 +14,7 @@ const services = {
   cache,
   ApiService: ApiService
 };
-// This file demonstrates the most complex "problematic" patterns:
+// This file demonstrates complex re-export patterns:
 // 1. ✅ Multiple export * statements
 // 2. ✅ Default + named exports mixed
 // 3. ✅ Re-exporting defaults as named

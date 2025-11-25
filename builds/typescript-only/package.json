@@ -4,10 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run clean && npm run compile",
+    "start": "pnpm run dev",
+    "build": "pnpm run clean && pnpm run compile",
+    "test": "echo 'No tests for build package'",
     "clean": "rm -rf ../../results/typescript-raw/*",
+    "dev": "tsc --watch",
     "compile": "tsc",
-    "watch": "tsc --watch"
+    
+    "watch": "pnpm run dev"
   },
   "devDependencies": {
     "typescript": "^5.3.0",

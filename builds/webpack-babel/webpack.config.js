@@ -9,7 +9,7 @@ const outDir = path.resolve(__dirname, "../../results/webpack-esm");
 
 /**
  * Webpack configuration for ESM output
- * This configuration proves that modern webpack can handle all "problematic" patterns
+ * This configuration demonstrates that modern webpack can handle comprehensive export patterns
  * and generate clean ESM output with tree-shaking
  */
 export default {
@@ -85,7 +85,7 @@ export default {
   },
   
   optimization: {
-    // Enable tree-shaking to prove barrel files don't hurt performance
+    // Enable tree-shaking to demonstrate barrel files maintain good performance
     usedExports: true,
     sideEffects: false,
     

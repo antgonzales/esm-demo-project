@@ -4,10 +4,11 @@ export * from './services';
 export { Button, Modal } from './components';
 export { formatString, formatDate, utils } from './utils';
 export { ApiService, cache, services } from './services';
+import { Button } from './components';
 import { ApiService as apiService } from './services';
 export declare const app: {
     components: {
-        Button: import("react").FC<import("./components").ButtonProps>;
+        Button: typeof Button;
     };
     utils: {
         formatString: (str: string, options?: {
@@ -22,8 +23,8 @@ export declare const app: {
 };
 declare const library: {
     components: {
-        Button: import("react").FC<import("./components").ButtonProps>;
-        Modal: import("react").FC<import("./components").ModalProps>;
+        Button: typeof Button;
+        Modal: typeof import("./components").Modal;
     };
     utils: {
         formatDate: (date: Date, format?: "short" | "long" | "iso") => string;
@@ -47,7 +48,7 @@ declare const library: {
     };
     app: {
         components: {
-            Button: import("react").FC<import("./components").ButtonProps>;
+            Button: typeof Button;
         };
         utils: {
             formatString: (str: string, options?: {

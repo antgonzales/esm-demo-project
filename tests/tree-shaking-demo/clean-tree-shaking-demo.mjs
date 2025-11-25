@@ -211,13 +211,13 @@ const runCleanDemo = async () => {
     console.log(`   Direct import:    ${formatBytes(singleDirect.size)}`);
     console.log(`   Difference:       ${formatBytes(Math.abs(difference))} (${percentDiff}%)`);
     
-    if (Math.abs(difference) < 50) { // Less than 50 bytes
-      console.log('   ✅ RESULT: No meaningful performance penalty!');
-    } else if (difference > 0) {
-      console.log('   ⚠️  RESULT: Minor overhead from barrel file');
-    } else {
-      console.log('   🎉 RESULT: Barrel file actually smaller!');
-    }
+     if (Math.abs(difference) < 50) { // Less than 50 bytes
+       console.log('   ✅ RESULT: Minimal performance difference');
+     } else if (difference > 0) {
+       console.log('   ⚠️  RESULT: Minor overhead from barrel file');
+     } else {
+       console.log('   🎉 RESULT: Barrel file actually smaller!');
+     }
     console.log('');
   }
   
@@ -230,11 +230,11 @@ const runCleanDemo = async () => {
     console.log(`   All utilities:    ${formatBytes(allUtils.size)}`);
     console.log(`   Code eliminated:  ${formatBytes(eliminated)} (${percentEliminated}% reduction)`);
     
-    if (eliminated > 1000) { // More than 1KB eliminated
-      console.log('   ✅ RESULT: Excellent tree-shaking performance!');
-    } else {
-      console.log('   📊 RESULT: Good tree-shaking, utilities are already compact');
-    }
+     if (eliminated > 1000) { // More than 1KB eliminated
+       console.log('   ✅ RESULT: Effective tree-shaking performance');
+     } else {
+       console.log('   📊 RESULT: Good tree-shaking, utilities are already compact');
+     }
     console.log('');
   }
   
@@ -251,15 +251,15 @@ const runCleanDemo = async () => {
   
   console.log('🎯 KEY INSIGHTS:');
   console.log('');
-  console.log('• ✅ Tree-shaking works perfectly through barrel files');
-  console.log('• ✅ Barrel files add minimal or no performance overhead');
-  console.log('• ✅ Unused functions are completely eliminated');
-  console.log('• ✅ Import scaling follows pay-for-what-you-use principle');
-  console.log('• ✅ export * patterns do not break tree-shaking');
-  console.log('');
-  console.log('🚀 FINAL VERDICT:');
-  console.log('Barrel files + Modern build tools = No performance penalty! 🎉');
-  console.log('The developer experience benefits come essentially "for free".');
+   console.log('• ✅ Tree-shaking works effectively through barrel files');
+   console.log('• ✅ Barrel files add minimal performance overhead');
+   console.log('• ✅ Unused functions are eliminated');
+   console.log('• ✅ Import scaling follows pay-for-what-you-use principle');
+   console.log('• ✅ export * patterns maintain tree-shaking effectiveness');
+   console.log('');
+   console.log('🚀 ANALYSIS SUMMARY:');
+   console.log('Barrel files + Modern build tools = Minimal performance overhead');
+   console.log('Developer experience benefits can be achieved with appropriate tooling.');
   
   return successful;
 };

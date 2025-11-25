@@ -2,9 +2,9 @@
 /**
  * ESM Compliance Test: TypeScript-Only Build Output
  * 
- * This test demonstrates what happens when you compile "problematic" patterns
- * with TypeScript alone (without build tools). It should show the issues
- * that critics are concerned about - missing .js extensions in imports.
+ * This test demonstrates what happens when you compile comprehensive export patterns
+ * with TypeScript alone (without build tools). It should show certain limitations
+ * regarding missing .js extensions in imports.
  */
 
 import { strict as assert } from 'assert';
@@ -71,21 +71,21 @@ try {
     if (fs.existsSync(indexDts)) {
       const content = fs.readFileSync(indexDts, 'utf-8');
       
-      // Check for problematic imports without .js extensions
+      // Check for imports without .js extensions
       const hasProblematicImports = content.includes('from \'./') && !content.includes('.js');
       
       if (hasProblematicImports) {
         console.log('  ⚠️  Found imports without .js extensions (ESM compliance issue)');
         
-        // Show examples of problematic imports
+        // Show examples of imports without extensions
         const lines = content.split('\n');
-        const problematicLines = lines.filter(line => 
+        const importsWithoutExtensions = lines.filter(line => 
           line.includes('from \'./') && !line.includes('.js\'')
         ).slice(0, 3);
         
-        if (problematicLines.length > 0) {
-          console.log('  📄 Example problematic imports:');
-          problematicLines.forEach(line => {
+        if (importsWithoutExtensions.length > 0) {
+          console.log('  📄 Example imports without extensions:');
+          importsWithoutExtensions.forEach(line => {
             console.log(`     ${line.trim()}`);
           });
         }
@@ -127,10 +127,10 @@ console.log('\n📊 TypeScript-Only Build Results:');
 console.log(`Tests passed: ${testsPassed}/${testsTotal}`);
 
 if (testsPassed === testsTotal) {
-  console.log('\n🤔 Unexpected: TypeScript-only build worked perfectly!');
+  console.log('\n🤔 Unexpected: TypeScript-only build worked effectively!');
   console.log('This might mean:');
   console.log('- TypeScript version handles imports differently than expected');
-  console.log('- The patterns used aren\'t as problematic as critics claim');
+  console.log('- The patterns used have better compatibility than initially expected');
   console.log('- Modern TypeScript has improved ESM handling');
 } else {
   console.log('\n✅ Expected result: TypeScript-only build shows limitations');

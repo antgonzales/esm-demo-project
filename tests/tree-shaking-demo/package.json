@@ -4,7 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tree-shaking-analysis.mjs",
+    "start": "pnpm run analyze",
+    "build": "echo 'No build for test package'",
+    "test": "node clean-tree-shaking-demo.mjs",
+    "clean": "rm -rf bundles/* clean-bundles/* output/*",
+    "analyze": "node clean-tree-shaking-demo.mjs",
+    
     "demo:single": "node demo-single-import.mjs",
     "demo:multiple": "node demo-multiple-imports.mjs",
     "demo:all": "node demo-all-imports.mjs"

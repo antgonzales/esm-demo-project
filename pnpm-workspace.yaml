@@ -1,0 +1,6 @@
+packages:
+  # Build configurations  
+  - 'builds/*'
+  
+  # Test suites
+  - 'tests/*'

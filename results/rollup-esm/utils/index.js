@@ -3,14 +3,14 @@ export { capitalize, formatString, slugify, truncate } from './string-utils.js';
 import dateUtils from './date-utils.js';
 export { addDays, formatDate, getDaysDifference, getStartOfWeek, isWeekend } from './date-utils.js';
 
-// Utils barrel file - ultimate "problematic" pattern according to critics
-// Uses export * for everything - the pattern they most dislike
+// Utils barrel file - demonstrates comprehensive export * patterns
+// Uses export * for everything - showcasing re-export capabilities
 // Export everything from both utility modules
 const utils = {
   string: stringUtils,
   date: dateUtils
 };
-// Export a default collection too (ultimate pattern mixing)
+// Export a default collection too (comprehensive pattern mixing)
 const allUtils = {
   ...stringUtils,
   ...dateUtils
