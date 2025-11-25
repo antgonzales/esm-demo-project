@@ -1,0 +1,53 @@
+{
+  "name": "esm-demo-project",
+  "version": "1.0.0",
+  "description": "Demonstration that build tools solve ESM compliance while preserving developer-friendly patterns",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./results/rollup-esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./results/rollup-esm/index.js",
+      "types": "./results/rollup-esm/index.d.ts"
+    },
+    "./webpack": {
+      "import": "./results/webpack-esm/index.js",
+      "types": "./results/webpack-esm/index.d.ts"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf results/*",
+    "build:rollup": "cd builds/rollup && npm run build",
+    "build:webpack": "cd builds/webpack-babel && npm run build", 
+    "build:typescript": "cd builds/typescript-only && npm run build",
+    "build:all": "npm run clean && npm run build:rollup && npm run build:webpack && npm run build:typescript",
+    "test:esm": "cd tests/node-esm && npm test",
+    "test:analysis": "cd tests/bundler-analysis && npm test",
+    "test:all": "npm run test:esm && npm run test:analysis",
+    "analyze": "npm run build:all && npm run test:all",
+    "demo": "npm run analyze && echo '\\n✅ ESM compliance demonstration complete!'",
+    "tree-shaking": "cd tests/tree-shaking-demo && node clean-tree-shaking-demo.mjs"
+  },
+  "keywords": [
+    "esm",
+    "modules",
+    "build-tools",
+    "barrel-files",
+    "rollup",
+    "webpack",
+    "typescript"
+  ],
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "react": "^18.2.0",
+    "@types/react": "^18.2.45"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "ESM Demonstration",
+  "license": "MIT"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "esm-demo-treeshaking",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tree-shaking-analysis.mjs",
+    "demo:single": "node demo-single-import.mjs",
+    "demo:multiple": "node demo-multiple-imports.mjs",
+    "demo:all": "node demo-all-imports.mjs"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "rollup": "^4.6.1",
+    "typescript": "^5.3.0"
+  }
+}

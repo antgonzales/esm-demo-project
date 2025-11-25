@@ -1,0 +1,13 @@
+{
+  "name": "esm-demo-bundle-analysis",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node analyze-bundles.mjs",
+    "analyze": "node analyze-bundles.mjs"
+  },
+  "devDependencies": {
+    "glob": "^10.3.10"
+  }
+}

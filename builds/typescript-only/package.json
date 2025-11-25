@@ -1,0 +1,16 @@
+{
+  "name": "esm-demo-typescript-build",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ../../results/typescript-raw/*",
+    "compile": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/react": "^18.2.45"
+  }
+}
